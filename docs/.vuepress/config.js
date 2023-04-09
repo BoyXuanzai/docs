@@ -1,3 +1,4 @@
+const moment = require('moment');
 module.exports = {
   title: '阿炫coding',
   description: '前端路线、知识资源汇总、前端小白的宝藏',
@@ -5,6 +6,17 @@ module.exports = {
     ['link', { rel: 'icon', href: '/assets/img/favicon.ico' }],
     ['meta', { name: 'keywords', content: '前端、vuepress、html、css、js、vue、计网、可视化、前端路线、前端小白' }],
     ['meta', { name: 'author', content: '阿炫不是啊炫' }]
+  ],
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => {
+          moment.locale("en")
+          return moment(timestamp).format("LLLL")
+        }
+      }
+    ]
   ],
   themeConfig: {
     // 最后修改时间
