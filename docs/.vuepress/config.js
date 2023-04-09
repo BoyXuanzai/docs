@@ -1,6 +1,6 @@
 const moment = require('moment')
 module.exports = {
-  base: '/learn-typescript/',
+  base: '/docs/',
   title: '阿炫coding',
   description: '前端路线、知识资源汇总、前端小白的宝藏',
   head: [
